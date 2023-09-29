@@ -6,6 +6,7 @@ import { VideoRecording } from "./VideoRecording";
 import { AfterboxVideoRecordingFields } from "./AfterboxVideoRecordingFields";
 import { RecordingButtons } from "./RecordingButtons";
 import { PreviewButtons } from "./PreviewButtons";
+import { UseRecordWebcam } from "react-record-webcam";
 
 interface FeatureProps {
   handleIconButtonClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -22,7 +23,7 @@ interface FeatureProps {
   setEmail: React.Dispatch<React.SetStateAction<string[]>>;
   setTimer: React.Dispatch<React.SetStateAction<number>>;
   videoPlaying: boolean;
-  recordWebcam: any;
+  recordWebcam: UseRecordWebcam;
   timer: number;
   countdown: number | null;
   showButton: boolean;
