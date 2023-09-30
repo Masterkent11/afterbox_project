@@ -29,11 +29,9 @@ export const VideoPreview: React.FC<VideoPreviewProps> = ({
 	)
 
 	useEffect(() => {
-    console.log(savedPreview)
 		if (savedPreview) {
-			const srcUrl = window.URL.createObjectURL(savedPreview)
 			if (recordWebcam.previewRef.current) {
-				recordWebcam.previewRef.current.src = srcUrl
+				recordWebcam.previewRef.current.src = savedPreview
 			}
 		}
 	}, [savedPreview])

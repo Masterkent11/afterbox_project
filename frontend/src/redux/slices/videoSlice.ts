@@ -14,7 +14,7 @@ interface VideoState {
 	submittedData: any[]
 	duration: number
 	video: any
-	savedPreview: null | Blob
+	savedPreview: null | string
 }
 
 const initialState: VideoState = {
@@ -73,7 +73,7 @@ export const videoSlice = createSlice({
 				(video) => video !== action.payload
 			)
 		},
-		savePreview: (state, action: PayloadAction<Blob | null>) => {
+		savePreview: (state, action: PayloadAction<string | null>) => {
 			state.savedPreview = action.payload
 		},
 	},

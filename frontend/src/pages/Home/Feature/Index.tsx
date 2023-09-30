@@ -323,7 +323,7 @@ const Home = () => {
 
 			if (!isLoggedIn) {
 				if (videoBlob) {
-					dispatch(savePreview(videoBlob)) // not serializable data, not good. mb need to convert to 
+					dispatch(savePreview(URL.createObjectURL(videoBlob))) // not serializable data, not good. mb need to convert to
 				}
 
 				navigate('/register')
